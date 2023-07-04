@@ -5,18 +5,79 @@
 <title>子聞韶</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://uyanjidv.github.io/favicon.ico?v=1">
-<link rel="stylesheet" href="/styles/main.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/styles/dist/calamansi.min.css">
+<link rel="stylesheet" href="/styles/w3.css">
   </head>
   <body>
-    <div id="app" class="main">
-        <div class="content-container">    
-<div class="archives-container">
-  
-    <h2 class="year">子在齊聞韶，三月不知肉味。</h2>
-  
+  <div style="width:100%; height:100%; position:fixed; bottom:0;">
+    <div id="calamansi-player-1">
+        Loading player...
+    </div>
 </div>
-        </div>
-      </div>
+  <script src="/styles/dist/calamansi.min.js"></script>
+  <script src="/styles/swTools.min.js"></script>
+  <script>
+    new Calamansi(document.querySelector('#calamansi-player-1'), {
+        skin: '/styles/dist/skins/calamansi',
+        playlists: {
+            'Classics': [
+                {
+                    source: '/Tracks/01 Speak To Me.mp3',
+                },
+                {
+                    source: '/Tracks/02 Breathe.mp3',
+                },
+            ],
+        },
+        defaultAlbumCover: '/styles/dist/skins/default-album-cover.png',
+    });
+    
+    var swTools = new swTools('/sw.min.js', {
+    cache: {
+        enabled: true,
+        //maxItems: 40,
+        /*noCacheItems: [
+            '/no-cache-page'
+        ],
+        noCachePatterns: [
+            /^(\/){1}no-cache-page$/
+        ]*/
+    },
+    prefetch: {
+        enabled: false,
+        items: [
+            'offline'
+        ]
+    },
+    /*saveDataItems: [
+        'fonts.googleapis.com'
+    ],*/
+    offline: {
+        page: '/404.html',
+        image: '<svg role="img" aria-labelledby="offline-title"'
+            + ' viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">'
+            + '<title id="offline-title">Offline</title>'
+            + '<g fill="none" fill-rule="evenodd"><path fill="#D8D8D8" d="M0 0h400v300H0z"/>'
+            + '<text fill="#9B9B9B" font-family="Times New Roman,Times,serif" font-size="72" font-weight="bold">'
+            + '<tspan x="93" y="172">offline</tspan></text></g></svg>'
+    },
+    defer: {
+        images: {
+            color: '#D8D8D8'
+        },
+        youtube: {
+            enabled: false
+        }
+    },
+    analytics: {
+        enabled: false,
+        maxTime: 24 * 60 * 60 * 1000
+    }
+});
+</script>
   </body>
 </html>
