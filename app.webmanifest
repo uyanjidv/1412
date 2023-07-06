@@ -1,0 +1,21 @@
+{
+    "name":"1412",
+    "short_name":"1412",
+    "icons":[
+                {
+                "src":"/android-chrome-192x192.png",
+                "sizes":"192x192",
+                "type":"image/png"
+                },
+                {
+                "src":"/android-chrome-512x512.png",
+                "sizes":"512x512",
+                "type":"image/png"
+                }
+            ],
+    "start_url":"/"，
+    "theme_color":"#b1d0a0",
+    "background_color":"#ffffff",
+    "display":"standalone",
+    "id":"1412"
+}
