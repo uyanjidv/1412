@@ -11,13 +11,7 @@
 <link rel="manifest" href="/app.webmanifest">
 <link rel="stylesheet" href="/styles/dist/calamansi.min.css">
 <link rel="stylesheet" href="/styles/w3.css">
-<link rel="stylesheet" type="text/css" href="/styles/addtohomescreen.css">
-<script src="/styles/addtohomescreen.js"></script>
-<script>
-addToHomescreen({
-            mandatory: true
-});
-</script>
+<link rel="stylesheet" type="text/css" href="/addtohomescreen/style/addtohomescreen.css">
   </head>
   <body>
   <div style="width:100%; height:100%; position:fixed; bottom:0;">
@@ -27,6 +21,7 @@ addToHomescreen({
 </div>
   <script src="/styles/dist/calamansi.min.js"></script>
   <script src="/styles/swTools.min.js"></script>
+  <script src="/addtohomescreen/src/addtohomescreen.js"></script>
   <script>
     new Calamansi(document.querySelector('#calamansi-player-1'), {
         skin: '/styles/dist/skins/calamansi',
@@ -85,6 +80,10 @@ addToHomescreen({
         maxTime: 24 * 60 * 60 * 1000
     }
 });
+
+    addToHomescreen({
+            mandatory: true
+    });
 </script>
   </body>
 </html>
