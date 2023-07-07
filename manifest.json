@@ -1,7 +1,17 @@
 {
-    "name":"1412",
-    "short_name":"1412",
-    "icons":[
+  "background_color": "#ffffff",
+  "description": "",
+  "dir": "auto",
+  "display": "standalone",
+  "name": "1412",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "1412",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "categories": [],
+  "screenshots": [],
+  "icons":[
                 {
                 "src":"/android-chrome-192x192.png",
                 "sizes":"192x192",
@@ -13,8 +23,5 @@
                 "type":"image/png"
                 }
             ],
-    "start_url":"https://uyanjidv.github.io/1412"，
-    "theme_color":"#b1d0a0",
-    "background_color":"#ffffff",
-    "display":"standalone"
+  "shortcuts": []
 }
