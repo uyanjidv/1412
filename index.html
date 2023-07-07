@@ -33,52 +33,54 @@
             ],
         },
         defaultAlbumCover: '/styles/dist/skins/default-album-cover.png',
-    });
+    })
   </script>
   <script src="/styles/swTools.min.js"></script>
   <script>
-    var swTools = new swTools('/sw.min.js', {
-    cache: {
-        //enabled: true,
-        //maxItems: 40,
-        /*noCacheItems: [
-            '/no-cache-page'
-        ],
-        noCachePatterns: [
-            /^(\/){1}no-cache-page$/
-        ]*/
-    },
-    prefetch: {
-        enabled: false,
-        items: [
-            'offline'
-        ]
-    },
-    /*saveDataItems: [
-        'fonts.googleapis.com'
-    ],*/
-    offline: {
-        page: '/404.html',
-        image: '<svg role="img" aria-labelledby="offline-title"'
-            + ' viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">'
-            + '<title id="offline-title">Offline</title>'
-            + '<g fill="none" fill-rule="evenodd"><path fill="#D8D8D8" d="M0 0h400v300H0z"/>'
-            + '<text fill="#9B9B9B" font-family="Times New Roman,Times,serif" font-size="72" font-weight="bold">'
-            + '<tspan x="93" y="172">offline</tspan></text></g></svg>'
-    },
-    defer: {
-        images: {
-            color: '#D8D8D8'
-        },
-        youtube: {
-            enabled: false
-        }
-    },
-    analytics: {
-        enabled: false,
-        maxTime: 24 * 60 * 60 * 1000
-    }
-});
+    if (navigator.serviceWorker) {
+        var swTools = new swTools('/sw.min.js', {
+            cache: {
+                //enabled: true,
+                //maxItems: 40,
+                /*noCacheItems: [
+                    '/no-cache-page'
+                ],
+                noCachePatterns: [
+                    /^(\/){1}no-cache-page$/
+                ]*/
+            },
+            prefetch: {
+                enabled: false,
+                items: [
+                    'offline'
+                ]
+            },
+            /*saveDataItems: [
+                'fonts.googleapis.com'
+            ],*/
+            offline: {
+                page: '/404.html',
+                image: '<svg role="img" aria-labelledby="offline-title"'
+                    + ' viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">'
+                    + '<title id="offline-title">Offline</title>'
+                    + '<g fill="none" fill-rule="evenodd"><path fill="#D8D8D8" d="M0 0h400v300H0z"/>'
+                    + '<text fill="#9B9B9B" font-family="Times New Roman,Times,serif" font-size="72" font-weight="bold">'
+                    + '<tspan x="93" y="172">offline</tspan></text></g></svg>'
+            },
+            defer: {
+                images: {
+                    color: '#D8D8D8'
+                },
+                youtube: {
+                    enabled: false
+                }
+            },
+            analytics: {
+                enabled: false,
+                maxTime: 24 * 60 * 60 * 1000
+            }
+        })
+      }
 </script>
   </body>
 </html>
