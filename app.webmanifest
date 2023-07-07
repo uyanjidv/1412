@@ -16,6 +16,5 @@
     "start_url":"https://1412.chythrns.press"，
     "theme_color":"#b1d0a0",
     "background_color":"#ffffff",
-    "display":"standalone",
-    "id":"1412"
+    "display":"standalone"
 }
