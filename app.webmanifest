@@ -1,6 +1,7 @@
 {
     "name":"1412",
     "short_name":"1412",
+    "description": "Illusion must go on.",
     "icons":[
                 {
                 "src":"/android-chrome-192x192.png",
