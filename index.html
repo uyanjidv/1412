@@ -18,6 +18,7 @@
         Loading player...
     </div>
 </div>
+<pwa-install id="installComponent" openmodal="true"></pwa-install>
   <script src="/styles/dist/calamansi.min.js"></script>
   <script>
     new Calamansi(document.querySelector('#calamansi-player-1'), {
@@ -82,5 +83,13 @@
         })
       }
 </script>
+<script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
+></script>
+  <script async defer>
+    const ref = document.getElementById("installComponent");
+    ref.getInstalledStatus();
+  </script>
   </body>
 </html>
