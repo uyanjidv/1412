@@ -16,7 +16,7 @@
   
     <pwa-install 
           id="illu"
-          openmodal>Install</pwa-install>
+          >Install</pwa-install>
 
 
   <script src="/styles/dist/calamansi.min.js"></script>
@@ -89,7 +89,8 @@
 ></script>
   <script async defer>
     const wrapper = document.getElementById("illu");
-    wrapper.openPrompt();
+    
+    alert(wrapper.getInstalledStatus());
   </script>
   </body>
 </html>
