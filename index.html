@@ -15,11 +15,7 @@
   <body>
   
 
-
-    <p>
-      Click the install button below!
-    </p>
-    <pwa-install>Install</pwa-install>
+    <pwa-install id="illu">Install</pwa-install>
 
 
   <script src="/styles/dist/calamansi.min.js"></script>
@@ -91,8 +87,8 @@
   src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
 ></script>
   <script async defer>
-    const ref = document.getElementById("installComponent");
-    ref.getInstalledStatus();
+    const ref = document.getElementById("illu");
+    ref.openPrompt();
   </script>
   </body>
 </html>
