@@ -14,7 +14,7 @@
   </head>
   <body>
   
-
+<p id="wrapper">Click this cause ¿</p>
     <pwa-install id="illu">Install</pwa-install>
 
 
@@ -87,8 +87,10 @@
   src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
 ></script>
   <script async defer>
-    const ref = document.getElementById("illu");
-    ref.openPrompt();
+    var wrapper = document.getElementById("wrapper");
+wrapper.onpointerover = function(){
+    wrapper.openPrompt();
+}
   </script>
   </body>
 </html>
