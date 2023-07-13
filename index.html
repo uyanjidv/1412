@@ -17,12 +17,13 @@
 
 
 
-<div class="w3-panel w3-blue w3-display-container">
+<div class="w3-panel w3-blue w3-display-container" id="intimate" style="display:none;">
   <span onclick="this.parentElement.style.display='none'"
   class="w3-button w3-large w3-display-topright">&times;</span>
   <h3>Info!</h3>
   <p>Blue often indicates a neutral informative change or action.<pwa-install></pwa-install></p>
 </div>
+<pwa-update showStorageEstimate swpath="sw.min.js" readyToAsk></pwa-update>
 ​
 
   
@@ -99,12 +100,17 @@
     type="module"
     src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
   ></script>
+  <script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate"
+  ></script>
   
   <script>
   
       function recordVisit() {
       
         var visits = localStorage.getItem("visits");
+        if (visits > 20){return;}
         if (visits) {
           visits = parseInt(visits) + 1;
         } else {
@@ -117,7 +123,14 @@
         var isInWebAppChrome = (window.matchMedia('(display-mode: standalone)').matches);
         alert(isInWebAppiOS);
         alert(isInWebAppChrome);
-        
+        if(isInWebAppiOS || isInWebAppChrome) {
+            alert("s mode");
+        } else {
+            alert("browser mode");
+            if(visits == 19){
+            document.getElementById("intimate").style.display = "block";
+            }
+        }
       }
       recordVisit();
       
