@@ -14,7 +14,19 @@
   </head>
   <body>
   
-    <pwa-install></pwa-install>
+
+
+
+<div class="w3-panel w3-blue w3-display-container">
+  <span onclick="this.parentElement.style.display='none'"
+  class="w3-button w3-large w3-display-topright">&times;</span>
+  <h3>Info!</h3>
+  <p>Blue often indicates a neutral informative change or action.<pwa-install></pwa-install></p>
+</div>
+​
+
+  
+
     
     
   <script src="/styles/dist/calamansi.min.js"></script>
@@ -87,8 +99,28 @@
     type="module"
     src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
   ></script>
-  <script async defer>
-
+  
+  <script>
+  
+      function recordVisit() {
+      
+        var visits = localStorage.getItem("visits");
+        if (visits) {
+          visits = parseInt(visits) + 1;
+        } else {
+          visits = 1;
+        }
+        localStorage.setItem("visits", visits);
+        alert("You have visited this page " + visits + " times.");
+        
+        var isInWebAppiOS = (window.navigator.standalone === true);
+        var isInWebAppChrome = (window.matchMedia('(display-mode: standalone)').matches);
+        alert(isInWebAppiOS);
+        alert(isInWebAppChrome);
+        
+      }
+      recordVisit();
+      
     
   </script>
   
